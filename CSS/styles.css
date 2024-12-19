@@ -1,0 +1,46 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+
+}
+.header{
+    border:2px blue solid;
+    margin:1px;
+}
+.main{
+    border:2px maroon solid;
+    margin:1px;
+    padding:1px;
+}
+
+.main.container.top{
+    display: inline-block;
+}
+
+.main.container.bottom{
+    display: inline-block;
+}
+
+.footer{
+    border:2px olive solid;
+    margin:1px;
+    padding:1px;
+}
+
+.footer.content{
+    display:inline-block;
+}
+
+#social img{
+    max-width: 25px;
+    float:left;
+}
+
+#banner img{
+    max-height: 200px;
+    margin: 0;
+    padding:0%;
+    
+}

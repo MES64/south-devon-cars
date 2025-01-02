@@ -1,46 +1,117 @@
 *{
-    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+img {
+    border-radius: 1rem;
+}
+
+nav ul, ul#social {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
-
-}
-.header{
-    border:2px blue solid;
-    margin:1px;
-}
-.main{
-    border:2px maroon solid;
-    margin:1px;
-    padding:1px;
 }
 
-.main.container.top{
-    display: inline-block;
+nav ul li, ul#social li {
+    list-style: none;
 }
 
-.main.container.bottom{
-    display: inline-block;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.footer{
-    border:2px olive solid;
-    margin:1px;
-    padding:1px;
+.container {
+    margin: 0 5rem;
 }
 
-.footer.content{
-    display:inline-block;
+header.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
-#social img{
-    max-width: 25px;
-    float:left;
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 
-#banner img{
-    max-height: 200px;
-    margin: 0;
-    padding:0%;
-    
+#top {
+    display: flex;
+    gap: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+#bottom {
+    display: grid;
+    grid-template-areas: 
+        "Left Right"
+        "Bottom Bottom";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25rem 25rem;
+    gap: 2rem;
+    border-top: solid 1px lightblue;
+    border-bottom: solid 1px lightblue;
+    padding: 2rem 0;
+}
+
+#imgLeft {
+    grid-area: Left;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#imgRight {
+    grid-area: Right;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#imgBottom {
+    grid-area: Bottom;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer{
+    display: grid;
+    grid-template-areas: 
+        "Top Top"
+        "Left Right";
+    gap: 2rem;
+    align-items: center;
+}
+
+#social {
+    grid-area: Left;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#copyright {
+    grid-area: Right;
+    text-align: right;
+}
+
+#siteMap {
+    grid-area: Top;
+    display: grid;
+    grid-template-areas: 
+        "Pages Services Misc"
+        "a a1 a2"
+        "b b1 b2"
+        "c c1 c2";
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+#siteMap h5 {
+    font-size: 1.2rem;
 }

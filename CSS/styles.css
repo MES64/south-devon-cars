@@ -25,10 +25,12 @@ a {
     color: black;
 }
 
+/**/
 .container {
-    margin: 0 5rem;
+    margin: 0 2rem;
 }
 
+/**/
 header.container {
     display: flex;
     align-items: center;
@@ -36,18 +38,29 @@ header.container {
     margin-bottom: 2rem;
 }
 
+/**/
 nav ul {
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
+/**/
 #top {
     display: flex;
     gap: 2rem;
+    flex-direction: column-reverse;
+    align-items: center;
     margin: 0 0 2rem 0;
+    text-align: center;
 }
 
+#top img {
+    object-fit: cover;
+    max-width: min(500px, 100%);
+}
+
+/**/
 #bottom {
     display: grid;
     grid-template-areas: 
@@ -80,6 +93,7 @@ nav ul {
     object-fit: cover;
 }
 
+/**/
 footer{
     display: grid;
     grid-template-areas: 
@@ -114,4 +128,16 @@ footer{
 
 #siteMap h5 {
     font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1000px) {
+    /* Try clamp */
+    .container {
+        margin: 0 5rem;
+    }
+
+    #top {
+        flex-direction: row;
+        text-align: left;
+    }
 }
